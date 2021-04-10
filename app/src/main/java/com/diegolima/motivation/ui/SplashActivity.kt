@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
-   private lateinit var mSecurityPreferences: SecurityPreferences
+    private lateinit var mSecurityPreferences: SecurityPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,28 +20,36 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
 
         mSecurityPreferences = SecurityPreferences(this)
 
-        button_save.setOnClickListener (this)
+        button_save.setOnClickListener(this)
 
-
+        verifyName()
 
     }
 
     override fun onClick(v: View?) {
         val id = v?.id
-        if(id == R.id.button_save){
+        if (id == R.id.button_save) {
             handleSave()
         }
     }
 
     private fun handleSave() {
         val name = editName.text.toString()
-        if(name != ""){
+        if (name != "") {
             mSecurityPreferences.storeString(MotivationConstants.KEY.PERSON_NAME, name)
             startActivity(Intent(this, MainActivity::class.java))
-        }else{
+            finish()
+        } else {
             Toast.makeText(this, "Informe seu nome", Toast.LENGTH_SHORT).show()
         }
     }
 
-
+    private fun verifyName() {
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        if (name != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 }
