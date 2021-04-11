@@ -24,7 +24,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:gravity="center"
-        android:hint="Qual é o seu nome?"
+        android:hint="@string/qual_o_seu_nome"
         android:textColor="@color/white"
         android:textColorHint="#F5F5F5"
         android:textSize="25sp"
@@ -40,7 +40,7 @@
         android:background="@drawable/shape_splash"
         android:elevation="32dp"
         android:padding="10dp"
-        android:text="Salvar"
+        android:text="@string/salvar"
         android:textAllCaps="false"
         android:textColor="@color/white" />
 

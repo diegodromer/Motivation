@@ -50,7 +50,7 @@
         android:layout_below="@id/menu"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:text="Your Name"
+        android:text="@string/your_name"
         android:textSize="24dp" />
 
 
@@ -62,7 +62,7 @@
         android:layout_centerVertical="true"
         android:layout_margin="16dp"
         android:layout_marginTop="32dp"
-        android:text="Frase"
+        android:text="@string/frase"
         android:textAlignment="center"
         android:textSize="22dp" />
 
@@ -84,7 +84,7 @@
         android:background="@drawable/ripple_button"
         android:fontFamily="sans-serif-black"
         android:padding="16dp"
-        android:text="Nova Frase"
+        android:text="@string/nova_frase"
 
         android:textAllCaps="false"
         android:textColor="@color/white"

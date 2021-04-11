@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Motivación</string>
+    <string name="vamos_comecar">Empecemos</string>
+    <string name="nova_frase">Nueva frase</string>
+    <string name="frase">Frase</string>
+    <string name="your_name">Su nombre </string>
+    <string name="qual_o_seu_nome">¿Cuál es su nombre?</string>
+    <string name="salvar">Guardar</string>
+</resources>
